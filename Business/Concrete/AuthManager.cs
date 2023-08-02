@@ -4,6 +4,7 @@ using System.Text;
 using Business.Abstract;
 using Business.Constants;
 using Core.Aspects.Serilog.Logger;
+using Core.CrossCuttingConcerns.Logger;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using Core.Utilities.Security.Hashing;
@@ -16,6 +17,7 @@ namespace Business.Concrete
     {
         private IUserService _userService;
         private ITokenHelper _tokenHelper;
+        LoggerTool loggerTool = new LoggerTool();
 
         public AuthManager(IUserService userService, ITokenHelper tokenHelper)
         {
@@ -45,12 +47,15 @@ namespace Business.Concrete
             var userToCheck = _userService.GetByMail(userForLoginDto.Email);
             if (userToCheck == null)
             {
+                LoggerTool.LoggerService(Messages.UserNotFound, userForLoginDto.Email + userForLoginDto.Password, "Login");
                 return new ErrorDataResult<User>(Messages.UserNotFound);
             }
 
             if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
             {
-                return new ErrorDataResult<User>(Messages.PasswordError);
+                LoggerTool.LoggerService(Messages.PasswordError, userForLoginDto.Email +userForLoginDto.Password, "Login");
+                return new ErrorDataResult<User>(Messages.PasswordError)
+                    ;
             }
 
             return new SuccessDataResult<User>(userToCheck, Messages.SuccessfulLogin);
@@ -64,7 +69,7 @@ namespace Business.Concrete
             }
             return new SuccessResult();
         }
-
+        [LogAspect]
         public IDataResult<AccessToken> CreateAccessToken(User user)
         {
             var claims = _userService.GetClaims(user);

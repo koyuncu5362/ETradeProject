@@ -16,3 +16,60 @@
 2023-08-02 21:19:59.337 +03:00 [DBG] ->Operation : Register ->Type of: UserForRegisterDto ->Details: System.String Email stringgggSystem.String Password stringSystem.String FirstName stringSystem.String LastName string ->Date: 2.08.2023 00:00:00 ->Hour: 21 ->Minute: 19
 2023-08-02 21:21:49.206 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0CategoryId 3ProductTextId 0ProductName stringUnitPrice 5UnitsInStock 0UploadTime string ->Date: 2.08.2023 00:00:00 ->Hour: 21 ->Minute: 21
 2023-08-02 21:24:57.430 +03:00 [DBG] ->Operation : Register ->Type of: UserForRegisterDto ->Details: Email sting Password string FirstName string LastName string  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 24
+2023-08-02 21:35:15.232 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email mk@mk.com Password mkmk  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 35
+2023-08-02 21:36:01.902 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName ProductName UnitPrice 10 UnitsInStock 0 UploadTime string  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 36
+2023-08-02 21:36:02.298 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: [
+  {
+    "PropertyName": "CategoryId",
+    "ErrorMessage": "CategoryCantEmpty"
+  }
+] ->Date: 2.08.2023 ->Hour: 21 ->Minute: 36
+2023-08-02 21:36:20.116 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 3 ProductTextId 0 ProductName ProductName UnitPrice 10 UnitsInStock 0 UploadTime string  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 36
+2023-08-02 21:39:23.843 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email mk@mk.com Password mk  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 39
+2023-08-02 21:40:02.251 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email mk@mk.com Password mk  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 40
+2023-08-02 21:40:16.629 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email mk@mk.com Password mkmk  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 40
+2023-08-02 21:41:49.803 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 5 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 41
+2023-08-02 21:42:01.293 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 5 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 42
+2023-08-02 21:45:16.255 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email mk@mk.com Password mkm  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 45
+2023-08-02 21:54:33.383 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email string Password strin  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 54
+2023-08-02 21:54:39.842 +03:00 [DBG] ->Operation : Login ->Type of: Entities.Dtos.UserForLoginDto ->Details: PasswordError ->Date: 2.08.2023 ->Hour: 21 ->Minute: 54
+2023-08-02 22:04:10.704 +03:00 [DBG] ->Operation : Login ->Type of: UserForLoginDto ->Details: Email mk@mk.com Password mkmk  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 4
+2023-08-02 22:04:17.981 +03:00 [DBG] ->Operation : CreateAccessToken ->Type of: User ->Details: Id 1 FirstName metin LastName koyuncu Email mk@mk.com PasswordSalt System.Byte[] PasswordHash System.Byte[] Status True  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 4
+2023-08-02 22:04:41.466 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 4
+2023-08-02 22:04:41.865 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: [
+  {
+    "PropertyName": "CategoryId",
+    "ErrorMessage": "CategoryCantEmpty"
+  }
+] ->Date: 2.08.2023 ->Hour: 22 ->Minute: 4
+2023-08-02 22:06:34.987 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 6
+2023-08-02 22:06:36.302 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: System.Collections.Generic.List`1[FluentValidation.Results.ValidationFailure] ->Date: 2.08.2023 ->Hour: 22 ->Minute: 6
+2023-08-02 22:11:16.291 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 11
+2023-08-02 22:11:17.589 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: [
+  {
+    "PropertyName": "CategoryId",
+    "ErrorMessage": "CategoryCantEmpty"
+  }
+] ->Date: 2.08.2023 ->Hour: 22 ->Minute: 11
+2023-08-02 22:14:00.540 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 14
+2023-08-02 22:15:11.865 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 15
+2023-08-02 22:15:23.670 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: [
+  {
+    "PropertyName": "CategoryId",
+    "ErrorMessage": "CategoryCantEmpty"
+  }
+] ->Date: 2.08.2023 ->Hour: 22 ->Minute: 15
+2023-08-02 22:20:11.512 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 20
+2023-08-02 22:20:13.299 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: System.Collections.Generic.List`1[FluentValidation.Results.ValidationFailure] ->Date: 2.08.2023 ->Hour: 22 ->Minute: 20
+2023-08-02 22:21:03.414 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 21
+2023-08-02 22:21:14.923 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 21
+2023-08-02 22:25:37.616 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 25
+2023-08-02 22:25:38.540 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: System.Collections.Generic.List`1[FluentValidation.Results.ValidationFailure] ->Date: 2.08.2023 ->Hour: 22 ->Minute: 25
+2023-08-02 22:27:37.249 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 27
+2023-08-02 22:27:38.225 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: CategoryCantEmpty ->Date: 2.08.2023 ->Hour: 22 ->Minute: 27
+2023-08-02 22:29:14.075 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 29
+2023-08-02 22:29:15.086 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: CategoryCantEmpty ->Date: 2.08.2023 ->Hour: 22 ->Minute: 29
+2023-08-02 22:30:09.558 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 30
+2023-08-02 22:30:10.538 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: CategoryCantEmpty ->Date: 2.08.2023 ->Hour: 22 ->Minute: 30
+2023-08-02 22:30:52.983 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0 CategoryId 0 ProductTextId 0 ProductName PineApple UnitPrice 7 UnitsInStock 39 UploadTime 75863  ->Date: 2.08.2023 ->Hour: 22 ->Minute: 30
+2023-08-02 22:30:53.879 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: CategoryCantEmpty ->Date: 2.08.2023 ->Hour: 22 ->Minute: 30

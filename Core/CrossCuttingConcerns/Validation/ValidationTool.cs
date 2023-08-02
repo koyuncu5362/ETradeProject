@@ -18,28 +18,16 @@ namespace Core.CrossCuttingConcerns.Validation
     //This Class Using Fluent But For Me
     public static class ValidationTool
     {
-        
-        public static void Validate(IValidator validator,object entity)
+
+        public static void Validate(IValidator validator, object entity)
         {
             var context = new ValidationContext<object>(entity);
             var result = validator.Validate(context);
             if (!result.IsValid)
             {
-                string errorMessage = GetJsonErrorMessage(result.Errors);
-                LoggerTool.LoggerService(errorMessage, "", "");
-                throw new ValidationException(errorMessage);
+                LoggerTool.LoggerService(result.Errors[0].ErrorMessage.ToString(), "", "");
+                throw new ValidationException(result.Errors[0].ErrorMessage);
             }
-        }
-        private static string GetJsonErrorMessage(IList<ValidationFailure> errors)
-        {
-            var errorObjects = new List<object>();
-            foreach (var error in errors)
-            {
-                var errorObject = new { PropertyName = error.PropertyName, ErrorMessage = error.ErrorMessage };
-                errorObjects.Add(errorObject);
-            }
-
-            return JsonSerializer.Serialize(errorObjects, new JsonSerializerOptions { WriteIndented = true });
         }
     }
 }

@@ -24,13 +24,13 @@ namespace Business.Constants
         public static string CategoryListedWithCategoryId { get; internal set; }
         public static string CategoryUpdated { get; internal set; }
         public static string UserRegistered { get; internal set; }
-        public static User UserNotFound { get; internal set; }
-        public static User PasswordError { get; internal set; }
+        public static string UserNotFound = "UserNotFound";
+        public static string PasswordError = "PasswordError";
         public static string SuccessfulLogin { get; internal set; }
         public static string UserAlreadyExists { get; internal set; }
         public static string AccessTokenCreated { get; internal set; }
 
-        public static string AuthorizationDenied = "YourRoleCantDoIt";
+        public static string AuthorizationDenied = "AuthorizationDenied";
 
         public static string ProductNameCantEmpty = "ProductNameCantEmpty";
         public static string ProductNameHaveToMin2Character = "ProductNameHaveToMin2Character";
