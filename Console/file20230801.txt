@@ -1,0 +1,8 @@
+2023-08-01 13:31:35.513 +03:00 [INF] I Write Anything
+2023-08-01 13:31:35.691 +03:00 [ERR] Something went wrong
+System.DivideByZeroException: Attempted to divide by zero.
+   at Program.<Main>$(String[] args) in D:\repos\ETrade\Console\Program.cs:line 19
+2023-08-01 13:31:51.099 +03:00 [INF] I Write Anything
+2023-08-01 13:31:51.232 +03:00 [ERR] Something went wrong
+System.DivideByZeroException: Attempted to divide by zero.
+   at Program.<Main>$(String[] args) in D:\repos\ETrade\Console\Program.cs:line 19

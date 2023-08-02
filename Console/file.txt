@@ -1,0 +1,18 @@
+2023-08-01 20:00:13.106 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details:  0 5 0 PineApple 12 39 75863 ->Date: 1.08.2023 00:00:00 ->Hour: 20 ->Minute: 0
+2023-08-01 20:02:23.297 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details:  0 5 0 PineApple 12 39 75863 ->Date: 1.08.2023 00:00:00 ->Hour: 20 ->Minute: 2
+2023-08-01 20:02:34.436 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details:  0 5 0 PineApple 0 39 75863 ->Date: 1.08.2023 00:00:00 ->Hour: 20 ->Minute: 2
+2023-08-01 20:02:34.507 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: [
+  {
+    "PropertyName": "UnitPrice",
+    "ErrorMessage": "UnitPriceCantEmpty"
+  },
+  {
+    "PropertyName": "UnitPrice",
+    "ErrorMessage": "UnitPriceHaveToGreaterThanZero"
+  }
+] ->Date: 1.08.2023 00:00:00 ->Hour: 20 ->Minute: 2
+2023-08-02 21:13:48.443 +03:00 [DBG] ->Operation : Register ->Type of: UserForRegisterDto ->Details:  stringg string string string ->Date: 2.08.2023 00:00:00 ->Hour: 21 ->Minute: 13
+2023-08-02 21:19:13.918 +03:00 [DBG] ->Operation : Register ->Type of: UserForRegisterDto ->Details: System.String Email stringggSystem.String Password stringSystem.String FirstName stringSystem.String LastName string ->Date: 2.08.2023 00:00:00 ->Hour: 21 ->Minute: 19
+2023-08-02 21:19:59.337 +03:00 [DBG] ->Operation : Register ->Type of: UserForRegisterDto ->Details: System.String Email stringgggSystem.String Password stringSystem.String FirstName stringSystem.String LastName string ->Date: 2.08.2023 00:00:00 ->Hour: 21 ->Minute: 19
+2023-08-02 21:21:49.206 +03:00 [DBG] ->Operation : Add ->Type of: Product ->Details: Id 0CategoryId 3ProductTextId 0ProductName stringUnitPrice 5UnitsInStock 0UploadTime string ->Date: 2.08.2023 00:00:00 ->Hour: 21 ->Minute: 21
+2023-08-02 21:24:57.430 +03:00 [DBG] ->Operation : Register ->Type of: UserForRegisterDto ->Details: Email sting Password string FirstName string LastName string  ->Date: 2.08.2023 ->Hour: 21 ->Minute: 24
