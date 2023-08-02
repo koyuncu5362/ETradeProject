@@ -12,26 +12,24 @@ namespace Business.Constants
         public static string ProductAdded = "Product Added";
         public static string ProductDeleted = "Product Deleted";
         public static string AllProductsListed = "Products Listed";
-        public static string AllProductsListedWithCategory = "Product Added";
-        public static string ProductListedWithProductId { get; internal set; }
-        public static string ProductsListedWithUnitPrice { get; internal set; }
-        public static string AllProductsListedWithDetails { get; internal set; }
-        public static string ProductUpdated { get; internal set; }
-        public static string ProductDetailCameWithId { get; internal set; }
-        public static string CategoryAdded { get; internal set; }
-        public static string CategoryDeleted { get; internal set; }
-        public static string CategoriesListed { get; internal set; }
-        public static string CategoryListedWithCategoryId { get; internal set; }
-        public static string CategoryUpdated { get; internal set; }
-        public static string UserRegistered { get; internal set; }
+        public static string AllProductsListedWithCategory = "AllProductsListedWithCategory";
+        public static string ProductListedWithProductId = "ProductListedWithProductId";
+        public static string ProductsListedWithUnitPrice = "ProductsListedWithUnitPrice";
+        public static string AllProductsListedWithDetails = "AllProductsListedWithDetails";
+        public static string ProductUpdated = "ProductUpdated";
+        public static string ProductDetailCameWithId = "ProductDetailCameWithId";
+        public static string CategoryAdded = "CategoryAdded";
+        public static string CategoryDeleted = "CategoryDeleted";
+        public static string CategoriesListed = "CategoriesListed";
+        public static string CategoryListedWithCategoryId = "CategoryListedWithCategoryId";
+        public static string CategoryUpdated = "CategoryUpdated";
+        public static string UserRegistered = "UserRegistered";
         public static string UserNotFound = "UserNotFound";
         public static string PasswordError = "PasswordError";
-        public static string SuccessfulLogin { get; internal set; }
-        public static string UserAlreadyExists { get; internal set; }
-        public static string AccessTokenCreated { get; internal set; }
-
+        public static string SuccessfulLogin = "SuccessfulLogin";
+        public static string UserAlreadyExists = "UserAlreadyExists";
+        public static string AccessTokenCreated = "AccessTokenCreated";
         public static string AuthorizationDenied = "AuthorizationDenied";
-
         public static string ProductNameCantEmpty = "ProductNameCantEmpty";
         public static string ProductNameHaveToMin2Character = "ProductNameHaveToMin2Character";
         public static string UnitPriceCantEmpty = "UnitPriceCantEmpty";
