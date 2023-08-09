@@ -35,5 +35,6 @@ namespace Business.Constants
         public static string UnitPriceCantEmpty = "UnitPriceCantEmpty";
         public static string UnitPriceHaveToGreaterThanZero = "UnitPriceHaveToGreaterThanZero";
         public static string CategoryCantEmpty = "CategoryCantEmpty";
+        public static string AllCategoriesListedWithAllDetails = "AllCategoriesListedWithAllDetails";
     }
 }

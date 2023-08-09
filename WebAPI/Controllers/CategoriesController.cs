@@ -24,5 +24,27 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpGet("getall")]
+        public IActionResult GetAll()
+        {
+            var result = _categoryService.GetAll();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+        [HttpGet("getallwithalldetails")]
+        public IActionResult GetAllWithDetails() 
+        {
+            var result = _categoryService.GetDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+        }
+        
     }
 }

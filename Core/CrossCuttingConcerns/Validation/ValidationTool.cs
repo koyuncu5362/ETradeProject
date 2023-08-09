@@ -15,7 +15,6 @@ using System.Web.Http;
 
 namespace Core.CrossCuttingConcerns.Validation
 {
-    //This Class Using Fluent But For Me
     public static class ValidationTool
     {
 

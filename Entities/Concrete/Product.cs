@@ -9,13 +9,14 @@ namespace Entities.Concrete
 {
     public class Product:IEntity
     {
-        public int Id { get; set; }
-        public int CategoryId { get; set; }
-        public int ProductTextId { get; set; }
-        public string ProductName { get; set; }
-        public decimal UnitPrice { get; set; }
-        public int UnitsInStock { get; set; }
-        public string UploadTime { get; set; }
+        public int? Id { get; set; }
+        public int? CategoryId { get; set; }
+        public string? Header  { get; set; }
+        public string? Description { get; set; }
+        public string? ProductName { get; set; }
+        public decimal? UnitPrice { get; set; }
+        public int? UnitsInStock { get; set; }
+        public string? UploadTime { get; set; }
 
     }
 }

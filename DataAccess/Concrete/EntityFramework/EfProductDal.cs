@@ -22,17 +22,15 @@ namespace DataAccess.Concrete.EntityFramework
                 var result = (from p in context.Products
                              join c in context.Categories
                              on p.CategoryId equals c.Id
-                             join t in context.ProductTexts
-                             on p.ProductTextId equals t.Id
                              select new ProductDetailDto
                              {
                                  CategoryName = c.CategoryName,
-                                 ProductId = p.Id,
+                                 ProductId = (int)p.Id,
                                  ProductName = p.ProductName,
-                                 UnitPrice = p.UnitPrice,
-                                 Description = t.Description,
-                                 Header = t.Header,
-                                 UnitsInStock = p.UnitsInStock,
+                                 UnitPrice = (decimal)p.UnitPrice,
+                                 Description = p.Description,
+                                 Header = p.Header,
+                                 UnitsInStock = (int)p.UnitsInStock,
                                  UploadTime = p.UploadTime,
                              }).ToList();
                 for (int i = 0; i < result.Count; i++)
@@ -51,19 +49,17 @@ namespace DataAccess.Concrete.EntityFramework
             using (ETradeDbContext context = new ETradeDbContext())
             {
                 var result = from p in context.Products
-                             join t in context.ProductTexts
-                             on p.ProductTextId equals t.Id
                              join c in context.Categories
                              on p.CategoryId equals c.Id
                              select new ProductDetailDto
                              {
                                  CategoryName = c.CategoryName,
-                                 ProductId = p.Id,
+                                 ProductId = (int)p.Id,
                                  ProductName = p.ProductName,
-                                 UnitPrice = p.UnitPrice,
-                                 Description = t.Description,
-                                 Header = t.Header,
-                                 UnitsInStock = p.UnitsInStock,
+                                 UnitPrice = (decimal)p.UnitPrice,
+                                 Description = p.Description,
+                                 Header = p.Header,
+                                 UnitsInStock = (int)p.UnitsInStock,
                                  UploadTime = p.UploadTime,
                              };
                 return result.ToList();

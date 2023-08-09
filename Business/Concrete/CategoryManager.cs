@@ -4,6 +4,7 @@ using Core.Aspects.Serilog.Logger;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,13 @@ namespace Business.Concrete
                 (result, Messages.CategoryListedWithCategoryId
                 );
         }
+
+        public IDataResult<List<CategoryDetailDto>> GetDetails()
+        {
+            var result =_categoryDal.GetCategoryDetails();
+            return new SuccessDataResult<List<CategoryDetailDto>>(result,Messages.AllCategoriesListedWithAllDetails);
+        }
+
         [LogAspect]
         public IResult Update(Category category)
         {
