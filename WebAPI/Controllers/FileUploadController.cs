@@ -1,4 +1,6 @@
-﻿using DataAccess.Concrete.EntityFramework;
+﻿using Business.Abstract;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
@@ -10,44 +12,51 @@ namespace WebAPI.Controllers
     public class FileUploadController : ControllerBase
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly EfImageDal _efImageDal;
+        IProductImageService _productImageService;
 
-        public FileUploadController(IWebHostEnvironment webHostEnvironment)
+        public FileUploadController(IWebHostEnvironment webHostEnvironment,IProductImageService productImageService)
         {
+            _productImageService = productImageService;
             _webHostEnvironment = webHostEnvironment;
         }
-        [HttpPost("[action]")]
-        public IActionResult UploadFiles(List<IFormFile> files)
+        [HttpPost("addwithimage")]
+        public IActionResult UploadFiles(List<IFormFile> files, int productId)
         {
             string directory = Path.Combine(_webHostEnvironment.ContentRootPath, "wwwroot/Uploads/Images");
-            EfImageDal efImage = new EfImageDal();
-
-            foreach (var file in files)
+            try
             {
-                string filepath = Path.Combine(directory, file.FileName);
-                using (var stream = new FileStream(filepath, FileMode.Create))
+                foreach (var file in files)
                 {
-                    file.CopyTo(stream);
-
-                    // FileStream'ı MemoryStream'a kopyalayarak içeriği alın
-                    using (var memoryStream = new MemoryStream())
+                    string filepath = Path.Combine(directory, file.FileName);
+                    using (var stream = new FileStream(filepath, FileMode.Create))
                     {
-                        stream.Seek(0, SeekOrigin.Begin);
-                        stream.CopyTo(memoryStream);
+                        file.CopyTo(stream);
 
-                        var image = new ProductImageModel
+                        using (var memoryStream = new MemoryStream())
                         {
-                            Name = file.FileName,
-                            ContentType = file.ContentType,
-                            Data = memoryStream.ToArray()
-                        };
+                            stream.Seek(0, SeekOrigin.Begin);
+                            stream.CopyTo(memoryStream);
 
-                        efImage.Add(image);
+                            var image = new ProductImageModel
+                            {
+                                Name = file.FileName,
+                                ContentType = file.ContentType,
+                                Data = memoryStream.ToArray(),
+                                ProductId = productId
+                            };
+
+                             _productImageService.Add(image);
+                        }
                     }
                 }
+                return Ok("Success");
             }
+            catch (Exception e)
+            {
 
-            return Ok("Success");
+                return BadRequest(e.Message);
+            }
+            
         }
         [HttpGet("getall")]
         public IActionResult GetAllImages()

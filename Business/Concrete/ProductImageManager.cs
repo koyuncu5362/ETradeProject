@@ -19,8 +19,27 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class ProductImageManager
+    public class ProductImageManager : IProductImageService
     {
-        
+        IProductImageDal _productImageDal;
+        public ProductImageManager(IProductImageDal productImageDal)
+        {
+            _productImageDal = productImageDal;
+        }
+        public IResult Add(ProductImageModel productImage)
+        {
+            _productImageDal.Add(productImage);
+            return new SuccessResult(Messages.ProductAdded);
+        }
+
+        public IResult Delete(ProductImageModel productImage)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IResult Update(IFormFile file, ProductImageModel productImage)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

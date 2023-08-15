@@ -36,6 +36,11 @@ namespace Business.Concrete
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
         }
+        public IResult AddWithImage(Product product, List<ProductImageModel> images)
+        {
+            _productDal.AddWithImage(product, images);
+            return new SuccessResult(Messages.ProductAdded);
+        }
         [LogAspect]
         public IResult Delete(Product product)
         {
@@ -105,5 +110,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>
                  (result, Messages.AllProductsListedWithDetails);
         }
+
+       
     }
 }

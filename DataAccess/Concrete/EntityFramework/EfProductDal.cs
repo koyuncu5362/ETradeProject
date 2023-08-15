@@ -3,6 +3,7 @@ using Core.Entities;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,35 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfProductDal : EfEntityRepositoryBase<Product, ETradeDbContext>, IProductDal
     {
+        public void AddWithImage(Product product, List<ProductImageModel> images)
+        {
+            using (ETradeDbContext context = new ETradeDbContext())
+            {
+                using (var transaction = context.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        context.Products.Add(product);
+                        context.SaveChanges();
+
+                        foreach (var image in images)
+                        {
+                            image.ProductId = (int)product.ImageId;
+                            context.ProductImages.Add(image);
+                        }
+                        context.SaveChanges();
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
+
         public ProductDetailDto GetProductDetail(int productId)
         {
             using (ETradeDbContext context = new ETradeDbContext())
@@ -54,7 +84,7 @@ namespace DataAccess.Concrete.EntityFramework
                              join c in context.Categories
                              on p.CategoryId equals c.Id
                              join i in context.ProductImages
-                             on p.Id equals i.ProductId
+                             on p.ImageId equals i.ProductId
                              where p.ShowCase==true && i.IsMain==true
                              select new ProductDetailDto
                              {
@@ -81,7 +111,7 @@ namespace DataAccess.Concrete.EntityFramework
                              join c in context.Categories
                              on p.CategoryId equals c.Id
                              join i in context.ProductImages
-                             on p.Id equals i.ProductId
+                             on p.ImageId equals i.ProductId
                              where i.IsMain == true
                              select new ProductDetailDto
                              {
@@ -96,7 +126,12 @@ namespace DataAccess.Concrete.EntityFramework
                                  UploadTime = p.UploadTime,
 
                              };
-                return result.ToList();
+                if (result.ToList()!=null)
+                {
+                    return result.ToList();
+                }
+                return null;
+                
             }
         }
     }

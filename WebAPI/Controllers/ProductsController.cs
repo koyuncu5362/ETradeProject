@@ -9,11 +9,16 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
         IProductService _productService;
-        public ProductsController(IProductService productService)
+
+        public ProductsController(IProductService productService, IWebHostEnvironment webHostEnvironment)
         {
             _productService = productService;
+            _webHostEnvironment = webHostEnvironment;
         }
+
+
         [HttpPost("add")]
         public IActionResult Add(Product product)
         {

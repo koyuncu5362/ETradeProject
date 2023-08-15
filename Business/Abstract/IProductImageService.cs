@@ -11,13 +11,9 @@ namespace Business.Abstract
 {
     public interface IProductImageService
     {
-        IResult Add(IFormFile file, ProductImageModel productImage);
+        IResult Add(ProductImageModel productImage);
         IResult Delete(ProductImageModel productImage);
         IResult Update(IFormFile file, ProductImageModel productImage);
-
-        IDataResult<List<ProductImageModel>> GetAll();
-        IDataResult<List<ProductImageModel>> GetByCarId(int productId);
-        IDataResult<ProductImageModel> GetByImageId(int imageId);
 
     }
 }

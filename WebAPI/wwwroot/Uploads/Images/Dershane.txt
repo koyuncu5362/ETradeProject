@@ -1,0 +1,13 @@
+Öğrenci işleri 
+Student Login Sayfası Tasarımı 
+parent sayfa tasarımı
+KONTROL İŞİNİ SNACKBAR İLE YAPICAZ Login de 
+Hepsini Try Catch ile 404 sayfasına bağlıyıcaz
+Student Home yapıyoruz
+Student için Bir Ana Ekranlar oluşturucaz ...
+Geri dönüşte yani telefondan yaptığımız geri tuşu veya işlevini kısıtlamak
+Öğretmen ekranında kontrol sağlanacak
+Bildirim muhabbeti çözülecek
+Tek bir kişinin girişi sağlanacak
+Sınıf girdisini dropdown ile yapıcaz
+Şuan FirebaseService de okuyoruz fakat logincontrollde okuyamıyoruz onu halledicez

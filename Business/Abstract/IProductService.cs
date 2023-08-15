@@ -21,5 +21,6 @@ namespace Business.Abstract
         IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max);
         IResult Update(Product product);
         IResult Delete(Product product);
+        IResult AddWithImage(Product product, List<ProductImageModel> images);
     }
 }

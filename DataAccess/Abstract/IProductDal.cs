@@ -1,6 +1,7 @@
 ﻿using Core.DataAccess;
 using Entities.Concrete;
 using Entities.DTOs;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace DataAccess.Abstract
         ProductDetailDto GetProductDetail(int productId);
         List<ProductDetailDto> GetProductsForShowCase();
         List<ProductDetailDto> ProductsList();
+        void AddWithImage(Product product, List<ProductImageModel> images);
     }
 }

@@ -18,5 +18,6 @@ namespace Entities.Concrete
         public int? UnitsInStock { get; set; }
         public string? UploadTime { get; set; }
         public bool ShowCase { get; set; }
+        public int? ImageId { get; set; }
     }
 }
