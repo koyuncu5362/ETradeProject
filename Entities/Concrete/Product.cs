@@ -17,6 +17,6 @@ namespace Entities.Concrete
         public decimal? UnitPrice { get; set; }
         public int? UnitsInStock { get; set; }
         public string? UploadTime { get; set; }
-
+        public bool ShowCase { get; set; }
     }
 }

@@ -22,7 +22,9 @@ namespace DataAccess.Concrete.EntityFramework
                 var result = (from p in context.Products
                              join c in context.Categories
                              on p.CategoryId equals c.Id
-                             select new ProductDetailDto
+                              join i in context.ProductImages
+                              on p.Id equals i.ProductId
+                              select new ProductDetailDto
                              {
                                  CategoryName = c.CategoryName,
                                  ProductId = (int)p.Id,
@@ -44,13 +46,16 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public List<ProductDetailDto> GetProductDetails()
+        public List<ProductDetailDto> GetProductsForShowCase()
         {
             using (ETradeDbContext context = new ETradeDbContext())
             {
                 var result = from p in context.Products
                              join c in context.Categories
                              on p.CategoryId equals c.Id
+                             join i in context.ProductImages
+                             on p.Id equals i.ProductId
+                             where p.ShowCase==true && i.IsMain==true
                              select new ProductDetailDto
                              {
                                  CategoryName = c.CategoryName,
@@ -61,6 +66,35 @@ namespace DataAccess.Concrete.EntityFramework
                                  Header = p.Header,
                                  UnitsInStock = (int)p.UnitsInStock,
                                  UploadTime = p.UploadTime,
+                                 ImageContentType = i.ContentType,
+                                 ImageData = i.Data,
+                             };
+                return result.ToList();
+            }
+        }
+
+        public List<ProductDetailDto> ProductsList()
+        {
+            using (ETradeDbContext context = new ETradeDbContext())
+            {
+                var result = from p in context.Products
+                             join c in context.Categories
+                             on p.CategoryId equals c.Id
+                             join i in context.ProductImages
+                             on p.Id equals i.ProductId
+                             where i.IsMain == true
+                             select new ProductDetailDto
+                             {
+                                 ProductName = p.ProductName,
+                                 UnitPrice = (decimal)p.UnitPrice,
+                                 CategoryName = c.CategoryName,
+                                 Description = p.Description,
+                                 Header = p.Header,
+                                 ImageContentType = i.ContentType,
+                                 ImageData = i.Data,
+                                 UnitsInStock = (int)p.UnitsInStock,
+                                 UploadTime = p.UploadTime,
+
                              };
                 return result.ToList();
             }

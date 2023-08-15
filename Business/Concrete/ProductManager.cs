@@ -94,11 +94,16 @@ namespace Business.Concrete
 
         public IDataResult<List<ProductDetailDto>> GetProductsDetails()
         {
-            var result = _productDal.GetProductDetails();
+            var result = _productDal.ProductsList();
             return new SuccessDataResult<List<ProductDetailDto>>
                 (result,Messages.AllProductsListedWithDetails);
         }
 
-
+        public IDataResult<List<ProductDetailDto>> GetProductsDetailsforShowCase()
+        {
+            var result = _productDal.GetProductsForShowCase();
+            return new SuccessDataResult<List<ProductDetailDto>>
+                 (result, Messages.AllProductsListedWithDetails);
+        }
     }
 }

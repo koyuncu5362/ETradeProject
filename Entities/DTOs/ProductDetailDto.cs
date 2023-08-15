@@ -9,7 +9,7 @@ namespace Entities.DTOs
 {
     public class ProductDetailDto:IDto
     {
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
         public string? CategoryName { get; set; }
         public string? ProductName { get; set; }
         public int UnitsInStock { get; set; }
@@ -17,5 +17,7 @@ namespace Entities.DTOs
         public decimal UnitPrice { get; set; }
         public string? Header { get; set; }
         public string? Description { get; set; }
+        public string? ImageContentType { get; set; }
+        public byte[]? ImageData { get; set; }
     }
 }
