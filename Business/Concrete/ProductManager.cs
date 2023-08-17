@@ -110,7 +110,5 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>
                  (result, Messages.AllProductsListedWithDetails);
         }
-
-       
     }
 }

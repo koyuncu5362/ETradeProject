@@ -37,6 +37,11 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
+        public IDataResult<ProductImageModel> GetForShowCase()
+        {
+            throw new NotImplementedException();
+        }
+
         public IResult Update(IFormFile file, ProductImageModel productImage)
         {
             throw new NotImplementedException();

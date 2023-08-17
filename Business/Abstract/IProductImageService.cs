@@ -14,6 +14,7 @@ namespace Business.Abstract
         IResult Add(ProductImageModel productImage);
         IResult Delete(ProductImageModel productImage);
         IResult Update(IFormFile file, ProductImageModel productImage);
+        IDataResult<ProductImageModel> GetForShowCase();
 
     }
 }
