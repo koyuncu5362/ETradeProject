@@ -88,11 +88,11 @@ namespace Business.Concrete
                 (result, Messages.ProductsListedWithUnitPrice);
         }
 
-        public IDataResult<ProductDetailDto> GetProductDetail(int productId)
+        public IDataResult<List<ProductDetailDto>> GetProductDetail(int productId)
         {
             var result = _productDal.GetProductDetail(productId);
 
-            return new SuccessDataResult<ProductDetailDto>
+            return new SuccessDataResult<List<ProductDetailDto>>
                 (result,Messages.ProductDetailCameWithId);
                
         }

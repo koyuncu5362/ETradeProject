@@ -13,7 +13,7 @@ namespace DataAccess.Abstract
 {
     public interface IProductDal:IEntityRepository<Product>
     {
-        ProductDetailDto GetProductDetail(int productId);
+        List<ProductDetailDto> GetProductDetail(int productId);
         List<ProductDetailDto> GetProductsForShowCase();
         List<ProductDetailDto> ProductsList();
         void AddWithImage(Product product, List<ProductImageModel> images);

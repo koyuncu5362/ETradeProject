@@ -44,16 +44,17 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public ProductDetailDto GetProductDetail(int productId)
+        public List<ProductDetailDto> GetProductDetail(int productId)
         {
             using (ETradeDbContext context = new ETradeDbContext())
             {
-                bool x = false;
                 var result = (from p in context.Products
                              join c in context.Categories
                              on p.CategoryId equals c.Id
                               join i in context.ProductImages
-                              on p.Id equals i.ProductId
+                              on p.ImageId equals i.ProductId
+                              where productId ==p.Id
+                              where p.CategoryId == c.Id
                               select new ProductDetailDto
                              {
                                  CategoryName = c.CategoryName,
@@ -64,15 +65,11 @@ namespace DataAccess.Concrete.EntityFramework
                                  Header = p.Header,
                                  UnitsInStock = (int)p.UnitsInStock,
                                  UploadTime = p.UploadTime,
-                             }).ToList();
-                for (int i = 0; i < result.Count; i++)
-                {
-                    if (result[i].ProductId==productId)
-                    {
-                        return result[i];
-                    }
-                }
-                return null;          
+                                 ImageContentType = i.ContentType,
+                                 ImageData = i.Data
+                             });
+                Console.WriteLine(result);
+                return result.ToList();
             }
         }
 
