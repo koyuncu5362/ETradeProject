@@ -38,5 +38,7 @@ namespace Business.Constants
         public static string AllCategoriesListedWithAllDetails = "AllCategoriesListedWithAllDetails";
         public static string AllImageListed = "AllImageListed";
         public static string AllProductsListedWithImages = "AllProductsListedWithImages";
+
+        public static string FavouriteProductDeleted { get; internal set; }
     }
 }

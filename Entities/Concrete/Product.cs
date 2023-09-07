@@ -19,5 +19,6 @@ namespace Entities.Concrete
         public string? UploadTime { get; set; }
         public bool ShowCase { get; set; }
         public int? ImageId { get; set; }
+        public string? Sizes { get; set; }
     }
 }
