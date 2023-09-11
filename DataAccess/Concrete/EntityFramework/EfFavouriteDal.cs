@@ -38,6 +38,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  ImageData = img.Data,
                                  ProductName = prod.ProductName,
                                  UnitPrice = (decimal)prod.UnitPrice,
+                                 UnitsInStock=prod.UnitsInStock
                              };
                 return result.ToList();
             }

@@ -17,5 +17,6 @@ namespace Entities.DTOs
         public string? Header { get; set; }
         public string? ImageContentType { get; set; }
         public byte[]? ImageData { get; set; }
+        public int? UnitsInStock { get; set; }
     }
 }

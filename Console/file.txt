@@ -7,3 +7,4 @@
 2023-09-08 21:45:51.354 +03:00 [DBG] ->Operation : Add ->Type of: Customer ->Details: Id 0 UniqueId de951fc9-ba7a-4ead-a311-4099aa2a644fa3f16cda-df4a-449a-ba4e-f9d598aff0dadd96c424-9def-4e5c-a7a8-50ca31dcf02b UserType Guest  ->Date: 8.09.2023 ->Hour: 21 ->Minute: 45
 2023-09-09 19:37:27.585 +03:00 [DBG] ->Operation : Add ->Type of: Customer ->Details: Id 0 UniqueId 9ae9f744-20bb-4964-8f45-751f09a575812613a607-036f-4e64-8a1f-1dc09b194ced8a1377e6-1ae2-470f-8227-5c0a78628878 UserType Guest  ->Date: 9.09.2023 ->Hour: 19 ->Minute: 37
 2023-09-09 22:12:20.092 +03:00 [DBG] ->Operation :  ->Type of:  ->Details: HaveToChooseSize ->Date: 9.09.2023 ->Hour: 22 ->Minute: 12
+2023-09-11 23:34:33.124 +03:00 [DBG] ->Operation : Add ->Type of: Customer ->Details: Id 0 UniqueId bceb0aa4-bb00-4752-bc9f-09bb37b9566dd9b73006-a5ee-4a6f-a3d0-31d398ae43a271919d01-d1ab-4c1a-8618-686cd6f2abec UserType Guest  ->Date: 11.09.2023 ->Hour: 23 ->Minute: 34
