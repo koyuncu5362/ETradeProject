@@ -35,9 +35,29 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpGet("getall")]
-        public IActionResult GetAll()
+        public IActionResult GetAll(string customerId)
         {
-            var result = _favouriteService.GetAllFavourite();
+            var result = _favouriteService.GetAllFavourite(customerId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+        [HttpGet("getbyId")]
+        public IActionResult GetById(int productId,string customerId)
+        {
+            var result = _favouriteService.GetById(productId,customerId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+        [HttpGet("deletebyId")]
+        public IActionResult DeleteById(int productId, string customerId)
+        {
+            var result = _favouriteService.DeleteByCustomerIdAndProductId(productId, customerId);
             if (result.Success)
             {
                 return Ok(result);

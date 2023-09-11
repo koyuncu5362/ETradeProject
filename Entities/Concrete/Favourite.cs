@@ -12,6 +12,5 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string CustomerId { get; set; }
         public int ProductId { get; set; }
-        public string ProductSize { get; set; }
     }
 }

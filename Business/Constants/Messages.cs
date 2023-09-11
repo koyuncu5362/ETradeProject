@@ -1,4 +1,5 @@
 ﻿using Core.Entities.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,9 @@ namespace Business.Constants
         public static string AllCategoriesListedWithAllDetails = "AllCategoriesListedWithAllDetails";
         public static string AllImageListed = "AllImageListed";
         public static string AllProductsListedWithImages = "AllProductsListedWithImages";
-
-        public static string FavouriteProductDeleted { get; internal set; }
+        public static string FavouriteProductDeleted = "FavouriteProductDeleted";
+        public static string CustomerIdCantEmpty = "CustomerIdCantEmpty";
+        public static string ProductIdCantEmpty = "ProductIdCantEmpty";
+        public static string HaveToChooseSize = "HaveToChooseSize";
     }
 }

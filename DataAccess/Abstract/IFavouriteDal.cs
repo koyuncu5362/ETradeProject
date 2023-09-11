@@ -13,5 +13,7 @@ namespace DataAccess.Abstract
     public interface IFavouriteDal:IEntityRepository<Favourite>
     {
         List<FavouritesDetailDto> GetFavourites(string customerId);
+        Favourite GetByProductIdAndCustomerId(int productId, string customerId);
+        void DeleteByCustomerIdAndProductId(int productId, string customerId);
     }
 }
