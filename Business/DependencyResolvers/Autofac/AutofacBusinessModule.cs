@@ -40,6 +40,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<FavouriteManager>().As<IFavouriteService>();
             builder.RegisterType<EfFavouriteDal>().As<IFavouriteDal>();
 
+            builder.RegisterType<CartManager>().As<ICartService>();
+            builder.RegisterType<EfCartDal>().As<ICartDal>();
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()

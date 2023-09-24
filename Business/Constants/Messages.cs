@@ -43,5 +43,8 @@ namespace Business.Constants
         public static string CustomerIdCantEmpty = "CustomerIdCantEmpty";
         public static string ProductIdCantEmpty = "ProductIdCantEmpty";
         public static string HaveToChooseSize = "HaveToChooseSize";
+
+        public static string CartAdded { get; internal set; }
+        public static string CartDeleted { get; internal set; }
     }
 }

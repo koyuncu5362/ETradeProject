@@ -38,7 +38,8 @@ namespace DataAccess.Concrete.EntityFramework
                                  ImageData = img.Data,
                                  ProductName = prod.ProductName,
                                  UnitPrice = (decimal)prod.UnitPrice,
-                                 UnitsInStock=prod.UnitsInStock
+                                 UnitsInStock=prod.UnitsInStock,
+                                 Sizes=prod.Sizes
                              };
                 return result.ToList();
             }
@@ -76,11 +77,11 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var favouritesToDelete = context.Favourites
            .Where(fav => fav.ProductId == productId && fav.CustomerId == customerId)
-           .ToList(); // Verileri liste olarak alın.
+           .ToList(); 
 
                 foreach (var favourite in favouritesToDelete)
                 {
-                    context.Entry(favourite).State = EntityState.Deleted; // Her bir veriyi silme durumuna getirin.
+                    context.Entry(favourite).State = EntityState.Deleted;
                 }
 
                 context.SaveChanges();
